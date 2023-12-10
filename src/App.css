@@ -24,7 +24,17 @@ p, h1, h2 {
     color: aquamarine;
 }
 .main {
-    z-index: 10
-    ;
+    height: 100vh;
+
+}
+.sectionContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 1fr;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

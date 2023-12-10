@@ -85,9 +85,9 @@ function init() {
     // add it to the geometry
     particlesData.push({
       velocity: new THREE.Vector3(
-        -1 + Math.random() * 2,
-        -1 + Math.random() * 2,
-        -1 + Math.random() * 2
+        -1 + Math.random() * 1,
+        -1 + Math.random() * 1,
+        -1 + Math.random() * 1
       ),
       numConnections: 0,
     });
@@ -246,8 +246,8 @@ function handleMouseMove(event) {
 
 function render() {
   // Use lerp to smoothly transition from the current rotation to the target rotation
-  group.rotation.y += (targetX - group.rotation.y) * 0.015;
-  group.rotation.x += (targetY - group.rotation.x) * 0.015;
+  group.rotation.y += (targetX - group.rotation.y) * 0.025;
+  group.rotation.x += (targetY - group.rotation.x) * 0.025;
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 

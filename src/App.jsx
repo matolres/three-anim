@@ -17,19 +17,20 @@ function App() {
             
             </ul>
           </nav>
+          <section className='sectionContainer'>
           <div className='container'>
-          <h1>Foo fest</h1>
-          <p>- EDM for the people- </p>
-          <div>
-            <a href="">Tickets</a>
-            <a href="">See artists</a>
-          </div>
-
+                <h1>Foo fest</h1>
+                <p>- EDM for the people- </p>
+              <div>
+                <a href="">Tickets</a>
+                <a href="">See artists</a>
+              </div>
           </div>
           
           <div>
-            <p></p>
+            <h2>Banner</h2>
           </div>
+          </section>
           </main>
           
 
