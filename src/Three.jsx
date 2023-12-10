@@ -14,9 +14,9 @@ let linesMesh;
 let targetX = 0;
 let targetY = 0;
 
-const maxParticleCount = 300;
-let particleCount = 300;
-const r = 500;
+const maxParticleCount = 250;
+let particleCount = 250;
+const r = 450;
 const rLong = 800;
 const rHalf = r / 2;
 
@@ -123,6 +123,7 @@ function init() {
     vertexColors: true,
     blending: THREE.AdditiveBlending,
     transparent: true,
+    opacity: 0.4,
     color: 0x0abdc6,
   });
 
