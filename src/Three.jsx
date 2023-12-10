@@ -14,9 +14,10 @@ let linesMesh;
 let targetX = 0;
 let targetY = 0;
 
-const maxParticleCount = 100;
-let particleCount = 100;
-const r = 400;
+const maxParticleCount = 300;
+let particleCount = 300;
+const r = 500;
+const rLong = 800;
 const rHalf = r / 2;
 
 const effectController = {
@@ -32,12 +33,9 @@ useEffect(() => {
 
   refContainer.current.appendChild(renderer.domElement);
 
-  // Start the animation loop
+
   animate();
 
-  // Don't call render() here
-
-  // Clean up event listeners when the component unmounts
   return () => {
     window.removeEventListener("resize", onWindowResize);
     window.removeEventListener("mousemove", handleMouseMove);
@@ -75,17 +73,13 @@ function init() {
   particlePositions = new Float32Array(maxParticleCount * 3);
 
   for (let i = 0; i < maxParticleCount; i++) {
-    const theta = Math.random() * Math.PI; // polar angle
-    const phi = Math.random() * 2 * Math.PI; // azimuthal angle
-    const r = Math.random() * rHalf;
+    const x = Math.random() * r - r / 2;
+    const y = Math.random() * rLong - rLong / 2;
+    const z = Math.random() * r - r / 2;
 
-    const x = r * Math.sin(theta) * Math.cos(phi);
-    const y = r * Math.sin(theta) * Math.sin(phi);
-    const z = r * Math.cos(theta);
-
-    particlePositions[i * 2] = x;
-    particlePositions[i * 2 + 1] = y;
-    particlePositions[i * 2 + 2] = z;
+    particlePositions[i * 3] = x;
+    particlePositions[i * 3 + 1] = y;
+    particlePositions[i * 3 + 2] = z;
 
     // add it to the geometry
     particlesData.push({
