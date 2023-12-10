@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { useEffect, useRef } from "react";
+import './App.css'; 
 
 function MyThree() {
   const refContainer = useRef(null);
@@ -245,8 +246,8 @@ function handleMouseMove(event) {
 
 function render() {
   // Use lerp to smoothly transition from the current rotation to the target rotation
-  group.rotation.y += (targetX - group.rotation.y) * 0.020;
-  group.rotation.x += (targetY - group.rotation.x) * 0.020;
+  group.rotation.y += (targetX - group.rotation.y) * 0.015;
+  group.rotation.x += (targetY - group.rotation.x) * 0.015;
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -254,7 +255,7 @@ function render() {
 }
 
   return (
-    <div ref={refContainer}></div>
+    <div ref={refContainer} className='anim'></div>
 
   );
 }

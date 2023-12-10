@@ -1,0 +1,30 @@
+.anim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    background-color: aquamarine;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.menu_items {
+    color: aquamarine;
+    z-index: 1;
+}
+p, h1, h2 {
+    color: aquamarine;
+}
+.main {
+    z-index: 10
+    ;
+}
+
