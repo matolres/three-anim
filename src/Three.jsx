@@ -123,7 +123,7 @@ function init() {
     vertexColors: true,
     blending: THREE.AdditiveBlending,
     transparent: true,
-    opacity: 0.4,
+    opacity: 0.3,
     color: 0x0abdc6,
   });
 
